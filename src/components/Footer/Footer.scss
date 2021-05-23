@@ -1,0 +1,18 @@
+@import '../../styles/global';
+
+.footer-wrap {
+  background-color: $dark-grey-color;
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+@media only screen and (min-width: $desktop-min-width) {
+  .footer-wrap {
+    text-align: left;
+  }
+}
