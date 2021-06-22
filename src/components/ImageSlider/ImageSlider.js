@@ -35,7 +35,8 @@ const ImageSlider = React.memo(({ carouselImages }) => {
       >
         <img
           loading='lazy'
-           src= '../../static/images/offers/offer1.jpg'
+          //  src= '../../static/images/offers/offer1.jpg'
+          src={bannerImageUrl}
           alt={bannerImageAlt}
           width='100%'
           height='auto'

@@ -6,6 +6,7 @@ import './Card.scss';
 const Card = React.memo(({ product, addCart }) => {
   const { name, imageURL, sku, description, price, disabled } = product;
 
+ 
   return (
     <div className='product-wrap'>
       <div className='product-header'>{name}</div>
@@ -13,7 +14,7 @@ const Card = React.memo(({ product, addCart }) => {
         <div className='product-image'>
           <img
             loading='lazy'
-            src={require(`../../../public/static/images/products/${imageURL}`).default}
+            src={imageURL}
             alt={sku}
           />
         </div>

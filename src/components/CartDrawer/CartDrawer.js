@@ -39,7 +39,8 @@ const CartDrawer = React.memo(({ isSlideOpen, cartSideNav }) => {
         <div className='cart-image-wrap'>
           <img
             loading='lazy'
-            src={require(`../../../static/images/products/${imageURL}`).default}
+            // src={require(`../../../static/images/products/${imageURL}`).default}
+            src= {imageURL}
             alt={name}
           />
         </div>
