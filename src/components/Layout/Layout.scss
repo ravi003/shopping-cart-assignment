@@ -17,7 +17,7 @@ body {
 .page-wrap {
   @extend parentElement;
   overflow: hidden;
-  min-height: calc(100vh - 44px);
+//   min-height: calc(100vh - 44px);
   padding-top: 16px;
 }
 
