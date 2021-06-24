@@ -13,7 +13,6 @@
 /**
  *  App Configuration
  */
-console.log(path.join(__dirname, 'static'));
  app.use('/static', express.static(path.join(__dirname, 'static')));
 
 

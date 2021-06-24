@@ -18,4 +18,9 @@ export const nameValidation = {
     maxLength: 40,
     pattern: /^\S*$/
   };
+
+  export const getCompleteImageURL = (param) => {
+    const currentENV = "http://localhost:5001";
+    return `${currentENV}${param}`;
+  };
   

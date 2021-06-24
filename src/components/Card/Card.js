@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import getCompeleteImageURL from "../../utils/validation";
 
+import {getCompleteImageURL} from '../../utils/validation';
 import './Card.scss';
 
 const Card = React.memo(({ product, addCart }) => {
@@ -14,7 +16,8 @@ const Card = React.memo(({ product, addCart }) => {
         <div className='product-image'>
           <img
             loading='lazy'
-            src={imageURL}
+             src={getCompleteImageURL(imageURL)}
+            // src = {getCompeleteImageURL(imageURL)}
             alt={sku}
           />
         </div>

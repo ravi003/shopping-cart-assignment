@@ -12,7 +12,8 @@ const Products = () => {
   const {
     state: { id }
   } = useLocation();
-  const [filterId, setFilterId] = useState(null);
+  const [filterId, setFilterId] = useState("");
+
 
   useEffect(() => {
     dispatch(fetchProductsDataRequest());

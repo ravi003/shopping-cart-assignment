@@ -20,11 +20,9 @@ const signUpForm = ({ history }) => {
   password.current = watch('password', '');
   const confirmPassword = watch('confirm_password');
   const onSubmit = (data) => {
-    console.log(data);
-    // history.push('/');
+     history.push('/');
     // reset();
   };
-  console.log('Heyy Log');
   return (
 
     <Form onSubmit={handleSubmit(onSubmit)}>

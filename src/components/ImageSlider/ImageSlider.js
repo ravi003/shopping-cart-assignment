@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from 'reactstrap';
+import {getCompleteImageURL} from '../../utils/validation';
 
 import './ImageSlider.scss';
 
@@ -36,7 +37,7 @@ const ImageSlider = React.memo(({ carouselImages }) => {
         <img
           loading='lazy'
           //  src= '../../static/images/offers/offer1.jpg'
-          src={bannerImageUrl}
+          src={getCompleteImageURL(bannerImageUrl)}
           alt={bannerImageAlt}
           width='100%'
           height='auto'

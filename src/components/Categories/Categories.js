@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { fetchCategoriesDataRequest } from '../../actions';
 import { allCategoriesData } from '../../selector';
 import './Categories.scss';
+import {getCompleteImageURL} from '../../utils/validation';
 
 const Categories = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const Categories = () => {
         <div className='image-wrap'>
           <img
             loading='lazy'
-            src= {imageUrl}
+            src= {getCompleteImageURL(imageUrl)}
             alt={name}
           />
         </div>

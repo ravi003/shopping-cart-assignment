@@ -9,6 +9,7 @@ import { faTimes, faGreaterThan, faPlus, faMinus } from '@fortawesome/free-solid
 import { cartProductQuantity, removeCartProduct } from '../../actions';
 import { allCartData } from '../../selector';
 import LowestPriceTag from '../../../static/images/lowest-price.png';
+import {getCompleteImageURL} from '../../utils/validation';
 import './CartDrawer.scss';
 
 const CartDrawer = React.memo(({ isSlideOpen, cartSideNav }) => {
@@ -40,7 +41,7 @@ const CartDrawer = React.memo(({ isSlideOpen, cartSideNav }) => {
           <img
             loading='lazy'
             // src={require(`../../../static/images/products/${imageURL}`).default}
-            src= {imageURL}
+            src= {getCompleteImageURL(imageURL)}
             alt={name}
           />
         </div>

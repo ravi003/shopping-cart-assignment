@@ -71,7 +71,7 @@ const ProductFilter = React.memo(({ filterId }) => {
             className={`collapse-header ${activeCategory ? 'active-header' : ''}`}
             onClick={toggle}
           >
-            {activeCategory ? activeCategory : data[0].name}
+            {activeCategory ? activeCategory : data[0]?.name}
             {isOpen ? <FontAwesomeIcon icon={faAngleUp} /> : <FontAwesomeIcon icon={faAngleDown} />}
           </div>
           <Collapse isOpen={isOpen}>

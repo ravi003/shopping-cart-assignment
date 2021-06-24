@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import ErrorMessage from '../../../components/ErrorMessage';
-import { emailValidation, passwordValidation } from '../../../utils/validation';
+import { emailValidation, passwordValidation, getCompleteImageURL } from '../../../utils/validation';
 import '../../../styles/Form.scss';
 
 const LoginForm = ({ history }) => {
@@ -16,8 +16,7 @@ const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const email = watch('email');
   const password = watch('password');
   const onSubmit = (data) => {
-    console.log(data);
-    // history.push('/');
+     history.push('/');
     // reset();
   };
   return (
@@ -26,15 +25,7 @@ const { register, handleSubmit, watch, formState: { errors } } = useForm();
         <div className='row'>
           <div className='col-sm-12 col-md-12 col-lg-12 col-xs-12'>
             <div className='floating-group'>
-            {/* <input {...register("email", emailValidation)} />
-            {errors?.email && <span>This field is required</span>} */}
               <Input
-              // placeholder="Create a goal"
-              // name="email"
-              //  {...register("email",{ required: true, minLength: 6 })}
-              //  error={errors?.email}
-               
-                //  type='email'
                 name='email'
                 id='email'
                 autoComplete='off'
